@@ -35,5 +35,5 @@ func _process(delta: float) -> void:
 
 func _on_attack_region_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
-		body.hit()
 		var dir = self.global_position - body.global_position
+		body.hit(dir)
